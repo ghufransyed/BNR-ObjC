@@ -13,23 +13,33 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
        
-        NSMutableString *str = [[NSMutableString alloc] init];
-        for (int i = 0; i < 10; i++) {
-            [str appendString:@"Aaron is cool!\n"];
-        }
+//        NSMutableString *str = [[NSMutableString alloc] init];
+//        for (int i = 0; i < 10; i++) {
+//            [str appendString:@"Aaron is cool!\n"];
+//        }
         
         NSError *error;
         
-        BOOL success = [str writeToFile:@"/tmp/cool.txt"
-                             atomically:YES
-                               encoding:NSUTF8StringEncoding
-                                  error:&error];
+//        BOOL success = [str writeToFile:@"/tmp/cool.txt"
+//                             atomically:YES
+//                               encoding:NSUTF8StringEncoding
+//                                  error:&error];
+//
+//        if (success) {
+//            NSLog(@"done writing /tmp/cool.txt");
+//        } else {
+//            NSLog(@"writing /tmp/cool.txt failed: %@",
+//                  [error localizedDescription]);
+//        }
         
-        if (success) {
-            NSLog(@"done writing /tmp/cool.txt");
+        NSString *str2 = [[NSString alloc] initWithContentsOfFile:@"/etc/resolv.conf"
+                                                         encoding:NSASCIIStringEncoding
+                                                            error:&error];
+        
+        if (!str2) {
+            NSLog(@"read failed: %@", [error localizedDescription]);
         } else {
-            NSLog(@"writing /tmp/cool.txt failed: %@",
-                  [error localizedDescription]);
+            NSLog(@"resolv.conf looks like this: %@", str2);
         }
         
     }
