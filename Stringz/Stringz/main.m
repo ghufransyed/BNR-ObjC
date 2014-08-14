@@ -18,11 +18,20 @@ int main(int argc, const char * argv[])
             [str appendString:@"Aaron is cool!\n"];
         }
         
-        [str writeToFile:@"/tmp/cool.txt"
-              atomically:YES
-                encoding:NSUTF8StringEncoding
-                   error:NULL];
-        NSLog(@"done writing /tmp/cool.txt");
+        NSError *error;
+        
+        BOOL success = [str writeToFile:@"/tmp/cool.txt"
+                             atomically:YES
+                               encoding:NSUTF8StringEncoding
+                                  error:&error];
+        
+        if (success) {
+            NSLog(@"done writing /tmp/cool.txt");
+        } else {
+            NSLog(@"writing /tmp/cool.txt failed: %@",
+                  [error localizedDescription]);
+        }
+        
     }
     return 0;
 }
