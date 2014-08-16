@@ -22,7 +22,7 @@ int main(int argc, const char * argv[])
 //                                                   object:nil];
         
         
-        [[NSNotificationCenter defaultCenter] addObserverForName:nil
+        [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemTimeZoneDidChangeNotification
                                                           object:nil
                                                            queue:nil
                                                       usingBlock: ^(NSNotification *note)
@@ -33,6 +33,7 @@ int main(int argc, const char * argv[])
         
         // appears to print (log) the message three times
         // usually, want to remove the Observer using
+        // [edit] this is wront, the error was having name as 'nil' instead of name:NSSystemTimeZoneDidChangeNotification 
         // e.g. [[NSNotificationCenter defaultCenter] removeObserver:self name:@"ItemChange" object:nil];
         // but cannot do that with anonymouse block
             
