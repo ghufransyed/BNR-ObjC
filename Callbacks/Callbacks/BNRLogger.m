@@ -11,10 +11,10 @@
 @implementation BNRLogger
 
 
-- (void) zoneChange: (NSNotificationCenter *) note
-{
-    NSLog(@"The system time zone has changed!");
-}
+//- (void) zoneChange: (NSNotificationCenter *) note
+//{
+//    NSLog(@"The system time zone has changed!");
+//}
 
 
 
