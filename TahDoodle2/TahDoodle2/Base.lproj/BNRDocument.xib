@@ -33,13 +33,16 @@
                             <action selector="addTask:" target="-2" id="c8c-FW-R07"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ysU-An-Tjb">
-                        <rect key="frame" x="318" y="-7" width="113" height="32"/>
+                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysU-An-Tjb">
+                        <rect key="frame" x="319" y="-7" width="113" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Delete Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QJ1-qe-Gbk">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="deleteTask:" target="-2" id="ngI-PL-b0U"/>
+                        </connections>
                     </button>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-1m-00x">
                         <rect key="frame" x="5" y="20" width="421" height="394"/>

@@ -90,6 +90,28 @@
     [self updateChangeCount:NSChangeDone];
 }
 
+-(void) deleteTask:(id)sender
+{
+//    [self.tasks removeObjectIdenticalTo:sender];
+//    [self.tasks removeObjectIdenticalTo:sender];
+    self.deleteFlag = true;
+}
+
+- (void) tableView:(NSTableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath
+{
+    if (self.deleteFlag) {
+        self.cell = [tableView cell]
+        [self.tasks removeObject:<#(id)#>]
+    }
+    
+}
+
+- (UITableViewCell*) tableView:(UITableView*) tableView
+         cellForRowAtIndexPath:(NSIndexPath*) indexPath
+{
+    self.cell = [tableView ]
+}
+
 #pragma mark Data Source Methods
 - (NSInteger) numberOfRowsInTableView:(NSTableView *)tv
 {
@@ -101,8 +123,7 @@
 objectValueForTableColumn:(NSTableColumn *)tableColumn
              row:(NSInteger)row
 
-oo
-o{
+{
     return [self.tasks objectAtIndex:row];
     
 }
