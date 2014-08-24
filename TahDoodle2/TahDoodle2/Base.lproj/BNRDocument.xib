@@ -33,6 +33,14 @@
                             <action selector="addTask:" target="-2" id="c8c-FW-R07"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ysU-An-Tjb">
+                        <rect key="frame" x="318" y="-7" width="113" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Delete Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QJ1-qe-Gbk">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-1m-00x">
                         <rect key="frame" x="5" y="20" width="421" height="394"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -40,7 +48,7 @@
                             <rect key="frame" x="1" y="17" width="419" height="376"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="sLE-BD-8Hp" id="ril-wg-A8a">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="sLE-BD-8Hp" viewBased="YES" id="ril-wg-A8a">
                                     <rect key="frame" x="0.0" y="0.0" width="419" height="376"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -85,9 +93,11 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Abd-1m-00x" secondAttribute="bottom" constant="20" symbolic="YES" id="APh-el-ndo"/>
                     <constraint firstAttribute="trailing" secondItem="Abd-1m-00x" secondAttribute="trailing" constant="-1" id="BLh-ey-H5I"/>
+                    <constraint firstItem="ysU-An-Tjb" firstAttribute="baseline" secondItem="gGh-mk-82l" secondAttribute="baseline" id="HrW-X7-cyu"/>
                     <constraint firstItem="Abd-1m-00x" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="-1" id="Jru-gC-tUT"/>
                     <constraint firstAttribute="bottom" secondItem="gGh-mk-82l" secondAttribute="bottom" id="KRU-VA-gT6"/>
                     <constraint firstItem="Abd-1m-00x" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="5" id="NCG-6F-F5b"/>
+                    <constraint firstAttribute="trailing" secondItem="ysU-An-Tjb" secondAttribute="trailing" id="gWK-EP-n8z"/>
                     <constraint firstItem="gGh-mk-82l" firstAttribute="leading" secondItem="Abd-1m-00x" secondAttribute="leading" id="uCz-jH-4US"/>
                 </constraints>
             </view>
