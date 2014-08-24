@@ -11,6 +11,7 @@
 		66CD37ED19A9913A000878A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CD37EC19A9913A000878A9 /* main.m */; };
 		66CD37F119A9913A000878A9 /* Appliances.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66CD37F019A9913A000878A9 /* Appliances.1 */; };
 		66CD37F919A9917E000878A9 /* BNRAppliance.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CD37F819A9917E000878A9 /* BNRAppliance.m */; };
+		66CD37FC19A9971E000878A9 /* BNROwnedAppliance.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CD37FB19A9971E000878A9 /* BNROwnedAppliance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		66CD37F019A9913A000878A9 /* Appliances.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Appliances.1; sourceTree = "<group>"; };
 		66CD37F719A9917E000878A9 /* BNRAppliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAppliance.h; sourceTree = "<group>"; };
 		66CD37F819A9917E000878A9 /* BNRAppliance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAppliance.m; sourceTree = "<group>"; };
+		66CD37FA19A9971E000878A9 /* BNROwnedAppliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNROwnedAppliance.h; sourceTree = "<group>"; };
+		66CD37FB19A9971E000878A9 /* BNROwnedAppliance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNROwnedAppliance.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				66CD37EC19A9913A000878A9 /* main.m */,
 				66CD37F719A9917E000878A9 /* BNRAppliance.h */,
 				66CD37F819A9917E000878A9 /* BNRAppliance.m */,
+				66CD37FA19A9971E000878A9 /* BNROwnedAppliance.h */,
+				66CD37FB19A9971E000878A9 /* BNROwnedAppliance.m */,
 				66CD37F019A9913A000878A9 /* Appliances.1 */,
 				66CD37EE19A9913A000878A9 /* Supporting Files */,
 			);
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CD37F919A9917E000878A9 /* BNRAppliance.m in Sources */,
+				66CD37FC19A9971E000878A9 /* BNROwnedAppliance.m in Sources */,
 				66CD37ED19A9913A000878A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
