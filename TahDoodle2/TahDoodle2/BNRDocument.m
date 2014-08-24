@@ -10,6 +10,8 @@
 
 @implementation BNRDocument
 
+#pragma mark - NSDocument Overrides
+
 - (id)init
 {
     self = [super init];
@@ -55,5 +57,40 @@
     @throw exception;
     return YES;
 }
+
+#pragma mark - Actions
+
+-(void) addTask:(id)sender
+{
+    // NSLog(@"Add Task Button clicked!");
+    if (!self.tasks) {
+        self.tasks = [NSMutableArray array];
+    }
+    [self.tasks addObject:@"New Item"];
+    [self.taskTable reloadData];
+    [self updateChangeCount:NSChangeDone];
+}
+
+#pragma mark Data Source Methods
+- (NSInteger) numberOfRowsInTableView:(NSTableView *)tv
+{
+    return [self.tasks count];
+}
+
+
+- (id) tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    return [self.tasks objectAtIndex:row];
+    
+}
+
+- (void) tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    [self.tasks replaceObjectAtIndex:row withObject:object];
+    [self updateChangeCount:NSChangeDone];
+}
+
+
+
 
 @end
