@@ -92,24 +92,11 @@
 
 -(void) deleteTask:(id)sender
 {
-//    [self.tasks removeObjectIdenticalTo:sender];
-//    [self.tasks removeObjectIdenticalTo:sender];
-    self.deleteFlag = true;
-}
-
-- (void) tableView:(NSTableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath
-{
-    if (self.deleteFlag) {
-        self.cell = [tableView cell]
-        [self.tasks removeObject:<#(id)#>]
+    if (self.taskTable.selectedRow >= 0) {
+        [self.tasks removeObjectAtIndex:self.taskTable.selectedRow];
+        [self.taskTable reloadData];
+        [self updateChangeCount:NSChangeDone];
     }
-    
-}
-
-- (UITableViewCell*) tableView:(UITableView*) tableView
-         cellForRowAtIndexPath:(NSIndexPath*) indexPath
-{
-    self.cell = [tableView ]
 }
 
 #pragma mark Data Source Methods

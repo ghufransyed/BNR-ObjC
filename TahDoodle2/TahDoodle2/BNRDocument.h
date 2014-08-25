@@ -13,8 +13,6 @@
 
 @property (nonatomic) NSMutableArray *tasks;
 @property (nonatomic) IBOutlet NSTableView *taskTable;
-@property (nonatomic) BOOL deleteFlag;
-@property (nonatomic) NSCell *cell;
 
 - (IBAction)addTask:(id)sender;
 - (IBAction)deleteTask:(id)sender;
